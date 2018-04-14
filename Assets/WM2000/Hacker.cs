@@ -98,24 +98,16 @@ public class Hacker : MonoBehaviour {
         currentScreen = Screen.Password;
         Terminal.ClearScreen();
        
-        switch(level)  // replaces an if statement.  Matches up values coming in of variable 'level' with a required operation 
-        // i.e. change variable 'password' to receive a spesific numbered value from a particular 'variable Array'. (List of values)
+        switch(level)  
         {
             case 1:
-                int index1 = Random.Range(0, L1passwords.Length); // Random.Range creates a random number assigned between 0 and 
-                                                                 // one-before thelength of the array called L1passwords
-                                                                 // the length of the array is 6 so thats 0-5 - (perfect!)
-
-                password = L1passwords[index1]; // L1Passwords is the variable array. 
-                                               // index is the integer assigned to hold the random number(above) and selects one of the passwords in the array
+                password = L1passwords[Random.Range(0, L1passwords.Length)];                              
                 break;
             case 2:
-                int index2 = Random.Range(0, L2passwords.Length); 
-                password = L2passwords[index2];                
+                password = L2passwords[Random.Range(0, L2passwords.Length)];                
                 break;
             case 3:
-                int index3 = Random.Range(0, L3passwords.Length);
-                password = L3passwords[index3];                 
+                password = L3passwords[Random.Range(0, L3passwords.Length)];                              
                 break;
         }
 
